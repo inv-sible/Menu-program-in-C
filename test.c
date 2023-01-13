@@ -1,22 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void Menu(int *menu);
+
 int main(){
     int menu, ctrl=0;
 
     do{
-        printf("=================================\n");
-        printf("\t\tMENU\n\n");
-        printf("\t1 - Input Values\n");
-        printf("\t2 - Option 2\n");
-        printf("\t3 - Option 3\n");
-        printf("\t4 - Option 4\n");
-        printf("\t5 - Exit\n");
-        printf("=================================\n");
-        printf("Choice: ");
-        scanf("%d", &menu);
-        system("cls");
-
+        Menu(&menu);
         if(menu == 1){
             //codes
             ctrl+=1;
@@ -47,4 +38,19 @@ int main(){
     }while(menu != 5);
 
     return 0;
+}
+
+
+void Menu(int *menu){
+    printf("=================================\n");
+    printf("\t\tMENU\n\n");
+    printf("\t1 - Input Values\n");
+    printf("\t2 - Option 2\n");
+    printf("\t3 - Option 3\n");
+    printf("\t4 - Option 4\n");
+    printf("\t5 - Exit\n");
+    printf("=================================\n");
+    printf("Choice: ");
+    scanf("%d", menu);
+    system("cls");
 }
